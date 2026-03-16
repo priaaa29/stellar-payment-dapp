@@ -127,10 +127,6 @@ Queries Stellar Horizon testnet API (`horizon-testnet.stellar.org`) to load acco
 
 ---
 
-## 🌐 Deployed App
-
-[Live Demo](https://YOUR_DEPLOYMENT_URL.vercel.app)
-
 ---
 
 ## 📝 Submission
