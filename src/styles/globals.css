@@ -1,125 +1,85 @@
-/* fonts.googleapis.com — swap Space Mono for body; keep it only for code */
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
 :root {
-  /* Surface */
-  --bg:            #fafaf8;   /* warm off-white page */
-  --bg-surface:     #f4f1ec;   /* recessed areas, sidebars */
-  --bg-card:        #ffffff;   /* cards, modals */
-  --bg-card-hover:  #f9f7f5;   /* subtle hover lift */
-
-  /* Text */
-  --text:           #1a1714;   /* near-black with warmth */
-  --text-muted:     #6b6560;   /* secondary labels */
-  --text-dim:       #9e9891;   /* placeholders, hints */
-
-  /* Borders */
-  --border:         #e2ddd8;   /* default divider */
-  --border-strong:  #c9c2b8;   /* interactive focus ring base */
-
-  /* Semantic — no glow variants */
-  --accent:         #2563eb;
-  --accent-subtle:  #eff6ff;
-  --success:        #16a34a;
-  --success-subtle: #f0fdf4;
-  --error:          #dc2626;
-  --error-subtle:   #fef2f2;
-  --warning:        #d97706;
-  --warning-subtle: #fffbeb;
-
-  /* Typography */
-  --font-sans: 'Geist', system-ui, sans-serif;
-  --font-mono: 'Geist Mono', ui-monospace, monospace;
-
-  /* Radii */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-
-  /* Shadows — functional, not decorative */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.04);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.03);
-
-  /* Transitions */
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);  /* spring-like, not linear */
-  --duration-fast:   120ms;
-  --duration-base:   200ms;
-  --duration-slow:   350ms;
+--bg: 
+#050b18;
+--bg-card: 
+#0a1628;
+--bg-card-hover: 
+#0f1e38;
+--border: 
+#1a2f50;
+--border-bright: 
+#2a4a7f;
+--text: 
+#e8f4ff;
+--text-muted: 
+#5a7a9f;
+--text-dim: 
+#3a5a7f;
+--accent: 
+#00d4ff;
+--accent-dim: rgba(0, 212, 255, 0.15);
+--accent-glow: rgba(0, 212, 255, 0.3);
+--success: 
+#00ff9d;
+--success-dim: rgba(0, 255, 157, 0.12);
+--error: 
+#ff4d6d;
+--error-dim: rgba(255, 77, 109, 0.12);
+--warning: 
+#ffb800;
+--stellar-gold: 
+#f5a623;
+--font-display: 'Syne', sans-serif;
+--font-mono: 'Space Mono', monospace;
 }
-
-/* Dark mode — same warmth, inverted */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:            #141210;
-    --bg-surface:     #1c1917;
-    --bg-card:        #211f1c;
-    --bg-card-hover:  #2a2825;
-    --text:           #f5f2ee;
-    --text-muted:     #9e9891;
-    --text-dim:       #6b6560;
-    --border:         #2e2b27;
-    --border-strong:  #3d3935;
-    --accent:         #60a5fa;  /* lighter blue for dark bg */
-    --accent-subtle:  rgba(96,165,250,0.1);
-    --success:        #4ade80;
-    --success-subtle: rgba(74,222,128,0.1);
-    --error:          #f87171;
-    --error-subtle:   rgba(248,113,113,0.1);
-    --warning:        #fbbf24;
-    --warning-subtle: rgba(251,191,36,0.1);
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.25);
-    --shadow-lg: 0 10px 15px rgba(0,0,0,0.2);
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-/* Base */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html, body {
   background: var(--bg);
   color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-mono);
+  min-height: 100vh;
+-webkit-font-smoothing: antialiased;
 }
-
-/* Scrollbar — understated */
-::-webkit-scrollbar       { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
-
-/* Animations — purposeful, not theatrical */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+body {
+  background-image: 
+radial-gradient(ellipse at 20% 20%, rgba(0, 100, 200, 0.08) 0%, transparent 50%),
+radial-gradient(ellipse at 80% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+}
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+/* Star field animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 @keyframes fadeIn {
   from { opacity: 0; }
-  to   { opacity: 1; }
+  to { opacity: 1; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+  50% { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(0, 212, 255, 0.1); }
 }
 @keyframes spin {
+  from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-
-/* Utility classes */
-.animate-fade-up { animation: fadeUp var(--duration-slow) var(--ease) both; }
-.animate-fade-in { animation: fadeIn var(--duration-base) var(--ease) both; }
-.animate-spin    { animation: spin 0.8s linear infinite; }
-
-/* Stagger children on load */
-.stagger > * { animation: fadeUp var(--duration-slow) var(--ease) both; }
-.stagger > *:nth-child(1) { animation-delay: 0ms;   }
-.stagger > *:nth-child(2) { animation-delay: 60ms;  }
-.stagger > *:nth-child(3) { animation-delay: 120ms; }
-.stagger > *:nth-child(4) { animation-delay: 180ms; }
-.stagger > *:nth-child(5) { animation-delay: 240ms; }
-
-/* Focus ring — accessibility, not decoration */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-radius: var(--radius-sm);
+@keyframes success-flash {
+  0% { background: var(--success-dim); }
+  50% { background: rgba(0, 255, 157, 0.25); }
+  100% { background: var(--success-dim); }
 }
+.animate-slide-up { animation: slideUp 0.4s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+.animate-spin { animation: spin 1s linear infinite; }

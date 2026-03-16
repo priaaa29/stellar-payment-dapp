@@ -71,17 +71,14 @@ npm start
 
 ## 📸 Screenshots
 
-### Wallet Connected State
-![Wallet Connected](./screenshots/wallet-connected.png)
+### Landing Page
+![Landing Page](./src/screenshots/landing-page.png)
 
-### Balance Displayed
-![Balance Display](./screenshots/balance.png)
+### Wallet Connected & Balance Displayed
+![Wallet Connected & Balance Display](./src/screenshots/wallet-connected.png)
 
 ### Successful Transaction
-![Transaction Success](./screenshots/tx-success.png)
-
-### Transaction Result Shown
-![Transaction Result](./screenshots/tx-result.png)
+![Transaction Success](./src/screenshots/transaction-successful.png)
 
 ---
 
